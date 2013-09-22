@@ -127,30 +127,22 @@ Customers.cid in
 	Agents.city = 'Dallas' or Agents.city = 'Duluth'))
 	
 --Question 7
+Select
+Customers.name
 
+From
+Customers
+
+Where
+Customers.discount in
+	(Select
+	Customers.discount
+
+	From 
+	Customers
+
+	Where
+	Customers.city = 'Dallas' or Customers.city = 'Kyoto')
+	
 		
 	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
