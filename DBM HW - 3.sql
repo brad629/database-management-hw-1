@@ -155,8 +155,64 @@ Where
 c.city= 'Duluth'
 
 --Question 10.
+Select 
+c.name, 
+c.city
+From 
+customers c
+Where 
+c.city in 
 
+	(Select 
+	p.city 
+	From 
+	products p
+	Group by 
+	p.city
+	Order by count(quantity) 
+	desc limit 1)
 
+--Question 11.
+Select 
+c.name, 
+c.city
+From 
+customers c
+Where 
+c.city in 
+	(Select 
+	p.city 
+	From 
+	products p
+	Group by 
+	p.city
+	Order by count(quantity) 
+	desc limit 1
+	)
+
+--Question 12.
+Select
+p.name,
+p.priceUSD
+
+From 
+products p
+
+Group by
+p.name,
+p.priceUSD
+
+having
+ avg (p.priceUSD)
+ >
+ (Select 
+   avg(p.priceUSD)
+	
+  From 
+  products p
+ ) 
+
+--Question 13.
 
 
 
