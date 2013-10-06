@@ -93,6 +93,68 @@ customers.cid not in
 	orders.cid = orders.cid)
 	
 --Question 6. 
+Select
+c.name,
+c.cid
+
+From
+customers c
+
+left Outer Join 
+orders o
+
+on 
+o.cid= c.cid
+
+Where 
+o.cid is null
+
+--Question 7.
+Select distinct
+a.name,
+c.name
+
+From 
+agents a,
+customers c,
+orders o1,
+orders o2
+
+Where
+a.aid=o1.aid
+And
+o1.aid=o2.aid
+And
+o2.cid=c.cid
+And
+c.city=a.city
+
+--Question 8.
+Select distinct
+a.name,
+c.name,
+c.city
+
+From 
+agents a,
+customers c
+
+Where
+c.city=a.city
+
+--Question 9.
+Select distinct
+c.name,
+c.city
+
+From 
+customers c,
+products p
+
+Where
+c.city= 'Duluth'
+
+--Question 10.
 
 
 
