@@ -228,6 +228,35 @@ c.cid = o.cid
 Order by
 o.dollars desc
 
+--Question 14. 
+Select 
+c.name,
+Coalesce
+(sum (o.dollars))
+
+From 
+customers c,
+orders o
+
+Group by
+c.name
+
+--Question 15.
+Select distinct
+c.name,
+p.name,
+a.name
+
+From 
+customers c,
+products p,
+agents a
+
+Where
+a.city = 'New York'
+
+
+
 
 
 
