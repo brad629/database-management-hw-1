@@ -255,6 +255,24 @@ agents a
 Where
 a.city = 'New York'
 
+--Question 16.
+Select 
+o.dollars
+From 
+customers c,
+products p,
+orders o
+
+Where
+o.cid = c.cid
+And
+o.pid = p.pid
+And   
+((p.priceusd*o.qty)-(p.priceusd*o.qty)*(c.discount *.01))= o.dollars
+order by
+o.dollars
+
+--Question 17.
 
 
 
