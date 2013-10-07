@@ -213,7 +213,20 @@ having
  ) 
 
 --Question 13.
+Select distinct
+c.name,
+o.pid,
+o.dollars
 
+From 
+customers c,
+orders o
+
+Where
+c.cid = o.cid
+
+Order by
+o.dollars desc
 
 
 
