@@ -273,6 +273,11 @@ order by
 o.dollars
 
 --Question 17.
+update orders
+set   dollars = 8801
+where dollars = 880
+
+--after running 16 again only 13 results are shown rather than the 14 that should be shown
 
 
 
